@@ -16,7 +16,7 @@
 class Solution {
 
     public int minDepth(TreeNode root) {
-        if (root.val == null) {
+        if (root == null) {
             return 0;
         }
         int left = minDepth(root.left);
@@ -24,7 +24,4 @@ class Solution {
         return (left == 0 || right == 0) ? left + right + 1 : Math.min(left,right) + 1;
     }
 
-    // public int count(int depth) {
-
-    // }
 }
